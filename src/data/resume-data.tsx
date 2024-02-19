@@ -21,7 +21,7 @@ export const RESUME_DATA: ResumeData = {
       },
       {
         name: "LinkedIn",
-        url: "https://www.linkedin.com/in/-paul-louis-b-4a832a5a",
+        url: "www.linkedin.com/in/👾-paul-louis-b-4a832a5a",
         icon: LinkedinLogo,
       },
       {

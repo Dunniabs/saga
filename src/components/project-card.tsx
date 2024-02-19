@@ -11,7 +11,7 @@ interface Props {
 export function ProjectCard({ title, description, tags, link }: Props) {
   return (
     <Card className="flex flex-col overflow-hidden border border-muted p-3">
-      <CardHeader className="">
+      <CardHeader>
         <div className="space-y-1">
           <CardTitle className="text-base">
             {link ? (

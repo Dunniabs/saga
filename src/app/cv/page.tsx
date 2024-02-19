@@ -18,11 +18,11 @@ export default function Page() {
   return (
     <main className="container relative mx-auto scroll-my-12 overflow-auto p-4 print:p-12 md:p-16">
       <section className="mx-auto w-full max-w-2xl space-y-8 bg-white print:space-y-6">
-        <div className="flex items-center justify-between">
-          <div className="flex-1 space-y-1.5">
+        <div className="flex items-center justify-between gap-2">
+          <div className="flex-1 gap-2 flex flex-col">
             <h1 className="text-2xl font-bold">{RESUME_DATA.name}</h1>
-            <p className="max-w-md text-pretty font-mono text-sm text-muted-foreground">{RESUME_DATA.about}</p>
-            <p className="max-w-md items-center text-pretty font-mono text-xs text-muted-foreground">
+            <p className="max-w-md text-pretty font-mono text-sm text-muted-foreground line-clamp-3">{RESUME_DATA.about}</p>
+            <p className="max-w-md items-center text-pretty font-mono text-xs text-muted-foreground flex py-1 truncate">
               <a
                 className="inline-flex gap-x-1.5 align-baseline leading-none hover:underline"
                 href={RESUME_DATA.locationLink}
@@ -30,7 +30,7 @@ export default function Page() {
                 rel="noreferrer"
               >
                 <GlobeIcon className="size-3" />
-                {RESUME_DATA.location}
+                <span className="line-clamp-1">{RESUME_DATA.location}</span>
               </a>
             </p>
             <div className="flex gap-x-1 pt-1 font-mono text-sm text-muted-foreground print:hidden">
@@ -84,14 +84,14 @@ export default function Page() {
           {RESUME_DATA.work.map((work) => {
             return (
               <Card key={work.company}>
-                <CardHeader>
-                  <div className="flex items-center justify-between gap-x-2 text-base">
-                    <h3 className="inline-flex items-center justify-center gap-x-1 font-semibold leading-none">
-                      <a className="hover:underline" href={work.link}>
+                <CardHeader className="gap-4">
+                  <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-2 text-base">
+                    <h3 className="inline-flex items-center justify-center gap-1 font-semibold leading-none">
+                      <a className="hover:underline" href={work.link} target="_blank" rel="noreferrer">
                         {work.company}
                       </a>
 
-                      <span className="inline-flex gap-x-1">
+                      <span className="inline-flex gap-1">
                         {work.badges?.map((badge) => (
                           <Badge variant="secondary" className="align-middle text-xs" key={badge}>
                             {badge}
@@ -99,7 +99,7 @@ export default function Page() {
                         ))}
                       </span>
                     </h3>
-                    <div className="text-sm tabular-nums text-gray-500">
+                    <div className="text-sm tabular-nums text-muted-foreground self-start">
                       {work.start} - {work.end}
                     </div>
                   </div>
@@ -131,16 +131,16 @@ export default function Page() {
         </Section>
         <Section>
           <h2 className="text-xl font-bold">Skills</h2>
-          <div className="flex flex-wrap gap-1">
+          <div className="flex flex-wrap gap-2">
             {RESUME_DATA.skills.map((skill) => {
               return <Badge key={skill}>{skill}</Badge>;
             })}
           </div>
         </Section>
 
-        <Section className="print-force-new-page scroll-mb-16">
+        <Section className="scroll-mb-16">
           <h2 className="text-xl font-bold">Projects</h2>
-          <div className="-mx-3 grid grid-cols-1 gap-3 print:grid-cols-3 print:gap-2 md:grid-cols-2 lg:grid-cols-3">
+          <div className="grid grid-cols-1 gap-3 print:grid-cols-3 print:gap-2 md:grid-cols-2">
             {RESUME_DATA.projects.map((project) => {
               return (
                 <ProjectCard
