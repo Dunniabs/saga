@@ -1,5 +1,5 @@
 import { BackgroundBeams } from "@/components/ui/background-beams";
-import Logo from "@/resources/svgs/logo.svg";
+import Logo from "@/components/ui/logo";
 
 export default function Home() {
   return (
