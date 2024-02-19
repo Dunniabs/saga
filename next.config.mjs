@@ -1,4 +1,3 @@
-
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
@@ -8,7 +7,12 @@ const nextConfig = {
     turbo: {
       rules: {
         "*.svg": {
-          loaders: ["@svgr/webpack"],
+          loaders: [
+            {
+              loader: "@svgr/webpack",
+              options: { icon: true, typescript: true },
+            },
+          ],
           as: "*.js",
         },
       },
