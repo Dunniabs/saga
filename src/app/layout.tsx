@@ -1,3 +1,4 @@
+import sharedConfig from "@/config";
 import { cn } from "@/lib/utils";
 import Providers from "@/providers";
 import type { Metadata } from "next";
@@ -27,6 +28,7 @@ const font = localFont({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL(sharedConfig.baseUrl),
   title: {
     default: "Dunniabs",
     template: "%s | Dunniabs",

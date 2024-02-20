@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "prepare": "husky",
-    "dev": "next dev --experimental-https --turbo",
+    "dev": "next dev --experimental-https --turbo -p 3042",
     "build": "next build",
     "start": "next start",
     "format": "pnpm biome format --write ./src && pnpm biome check --apply ./src",

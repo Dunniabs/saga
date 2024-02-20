@@ -4,11 +4,26 @@ import Logo from "@/components/ui/logo";
 import { TDCardBody, TDCardContainer, TDCardItem } from "@/components/ui/text-3d-card";
 import { TextGenerateEffect } from "@/components/ui/text-generate-effect";
 import ThemeButton from "@/components/ui/theme-button";
+import sharedConfig from "@/config";
 import { RESUME_DATA } from "@/data/resume-data";
 import { opacityInViewVariants } from "@/framerVariants";
 import { MotionDiv, MotionHeader } from "@/lib/framer-motion";
-import HeroImage from "@/resources/images/visual-2.png";
+import HeroImage from "@/resources/images/hero-dunniabs.png";
+import type { Metadata } from "next";
 import Image from "next/image";
+
+export const metadata: Metadata = {
+  alternates: {
+    canonical: "/",
+  },
+  description: "Dunniabs - Turn Your Vision into Reality",
+  openGraph: {
+    title: "Dunniabs",
+    description: "Turn Your Vision into Reality",
+    type: "website",
+    url: sharedConfig.baseUrl,
+  },
+};
 
 export default function Home() {
   return (
@@ -33,7 +48,7 @@ export default function Home() {
             </div>
             <div className="flex gap-2 flex-wrap justify-center md:justify-start md:mb-10">
               {RESUME_DATA.skills.slice(0, 8).map((skill) => (
-                <Badge>{skill}</Badge>
+                <Badge key={`${skill}`}>{skill}</Badge>
               ))}
             </div>
           </div>
