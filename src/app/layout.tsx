@@ -1,6 +1,7 @@
 import sharedConfig from "@/config";
 import { cn } from "@/lib/utils";
 import Providers from "@/providers";
+import { Analytics } from "@vercel/analytics/react";
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import type { ReactNode } from "react";
@@ -43,6 +44,7 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body className={cn("min-h-screen bg-background antialiased transition-colors", font.className)}>
+        <Analytics />
         <Providers>{children}</Providers>
       </body>
     </html>
