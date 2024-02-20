@@ -1,4 +1,5 @@
 import { cn } from "@/lib/utils";
+import Providers from "@/providers";
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import type { ReactNode } from "react";
@@ -26,7 +27,10 @@ const font = localFont({
 });
 
 export const metadata: Metadata = {
-  title: "Saga",
+  title: {
+    default: "Dunniabs",
+    template: "%s | Dunniabs",
+  },
 };
 
 export default function RootLayout({
@@ -35,8 +39,10 @@ export default function RootLayout({
   children: ReactNode;
 }>) {
   return (
-    <html lang="en" suppressHydrationWarning className="dark">
-      <body className={cn("min-h-screen bg-background antialiased transition-colors", font.className)}>{children}</body>
+    <html lang="en" suppressHydrationWarning>
+      <body className={cn("min-h-screen bg-background antialiased transition-colors", font.className)}>
+        <Providers>{children}</Providers>
+      </body>
     </html>
   );
 }

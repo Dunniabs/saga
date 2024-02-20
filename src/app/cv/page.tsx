@@ -6,6 +6,8 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader } from "@/components/ui/card";
 import { Section } from "@/components/ui/section";
 import { RESUME_DATA } from "@/data/resume-data";
+import { pageWrapperTransitionVariants } from "@/framerVariants";
+import { MotionMain } from "@/lib/framer-motion";
 import { GlobeIcon, MailIcon, PhoneIcon } from "lucide-react";
 import type { Metadata } from "next";
 
@@ -16,8 +18,8 @@ export const metadata: Metadata = {
 
 export default function Page() {
   return (
-    <main className="container relative mx-auto scroll-my-12 overflow-auto p-4 print:p-12 md:p-16">
-      <section className="mx-auto w-full max-w-2xl space-y-8 bg-white print:space-y-6">
+    <MotionMain {...pageWrapperTransitionVariants} className="container relative mx-auto scroll-my-12 overflow-auto p-4 print:p-12 md:p-16">
+      <section className="mx-auto w-full max-w-2xl space-y-8 bg-background print:space-y-6">
         <div className="flex items-center justify-between gap-2">
           <div className="flex-1 gap-2 flex flex-col">
             <h1 className="text-2xl font-bold">{RESUME_DATA.name}</h1>
@@ -168,6 +170,6 @@ export default function Page() {
           })),
         ]}
       />
-    </main>
+    </MotionMain>
   );
 }

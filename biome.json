@@ -22,6 +22,9 @@
       "nursery": {
         "all": true,
         "useFilenamingConvention": "off"
+      },
+      "correctness": {
+        "useExhaustiveDependencies": "off"
       }
     }
   },

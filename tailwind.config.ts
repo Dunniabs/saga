@@ -1,24 +1,8 @@
 import type { Config } from "tailwindcss";
 import { fontFamily } from "tailwindcss/defaultTheme";
-import flattenColorPalette from "tailwindcss/lib/util/flattenColorPalette";
-
-function addVariablesForColors({
-  addBase,
-  theme,
-}: {
-  addBase: (styles: Record<string, unknown>) => void;
-  theme: (path: string) => unknown;
-}) {
-  const allColors = flattenColorPalette(theme("colors"));
-  const newVars = Object.fromEntries(Object.entries(allColors).map(([key, val]) => [`--${key}`, val]));
-
-  addBase({
-    ":root": newVars,
-  });
-}
 
 const config = {
-  darkMode: "class",
+  darkMode: ["class"],
   content: ["./src/**/*.{ts,tsx}"],
   theme: {
     extend: {
@@ -81,7 +65,7 @@ const config = {
       },
     },
   },
-  plugins: [require("tailwindcss-animate"), addVariablesForColors],
+  plugins: [require("tailwindcss-animate")],
 } satisfies Config;
 
 export default config;
