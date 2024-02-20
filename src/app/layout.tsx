@@ -1,32 +1,11 @@
-import sharedConfig from "@/config";
+import sharedConfig from "@/constants/config";
+import { coreFont } from "@/constants/font";
 import { cn } from "@/lib/utils";
 import Providers from "@/providers";
 import { Analytics } from "@vercel/analytics/react";
 import type { Metadata } from "next";
-import localFont from "next/font/local";
 import type { ReactNode } from "react";
 import "./globals.css";
-
-const font = localFont({
-  src: [
-    {
-      path: "../../public/font/Satoshi-Regular.woff2",
-      weight: "400",
-      style: "normal",
-    },
-    {
-      path: "../../public/font/Satoshi-Medium.woff2",
-      weight: "500",
-      style: "normal",
-    },
-    {
-      path: "../../public/font/Satoshi-Bold.woff2",
-      weight: "700",
-      style: "normal",
-    },
-  ],
-  display: "swap",
-});
 
 export const metadata: Metadata = {
   metadataBase: new URL(sharedConfig.baseUrl),
@@ -43,7 +22,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={cn("min-h-screen bg-background antialiased transition-colors", font.className)}>
+      <body className={cn("min-h-screen bg-background antialiased transition-colors", coreFont.className)}>
         <Analytics />
         <Providers>{children}</Providers>
       </body>

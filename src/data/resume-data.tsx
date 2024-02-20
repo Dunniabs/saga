@@ -228,18 +228,27 @@ export const RESUME_DATA: ResumeData = {
     "Node.js",
     "React",
     "Blockchain",
+    "AI",
     "AWS",
-    "Infra",
+    "Prisma",
     "Stripe",
     "GraphQL",
     "WebRTC",
     "Docker",
-    "Prisma",
     "Tailwind CSS",
     "Eslint",
     "Biomejs",
   ],
   projects: [
+    {
+      title: "Reboom",
+      techStack: ["AI", "Next.js", "Langchain", "tRPC", "Prisma"],
+      description: "A saas app to scale your inbound organic traffic",
+      link: {
+        label: "Reboom",
+        href: "https://reboom.co",
+      },
+    },
     {
       title: "Great War",
       techStack: ["MultiversX", "Next.js", "tRPC", "Prisma"],
@@ -260,7 +269,7 @@ export const RESUME_DATA: ResumeData = {
     },
     {
       title: "Rizen city",
-      techStack: ["Ethereum", "Next.js"],
+      techStack: ["Ethereum", "Next.js", "Art"],
       description: "A platform to build and grow your online business",
       link: {
         label: "Rizen City",

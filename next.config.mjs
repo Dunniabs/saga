@@ -4,19 +4,6 @@ const nextConfig = {
   swcMinify: true,
   experimental: {
     optimizePackageImports: ["@phosphor-icons/react"],
-    turbo: {
-      rules: {
-        "*.svg": {
-          loaders: [
-            {
-              loader: "@svgr/webpack",
-              options: { icon: true, typescript: true },
-            },
-          ],
-          as: "*.js",
-        },
-      },
-    },
   },
   webpack(config) {
     const fileLoaderRule = config.module.rules.find((rule) => rule.test?.test?.(".svg"));
