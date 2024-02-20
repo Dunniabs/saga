@@ -1,18 +1,20 @@
 import SparklesBg from "@/components/sparkles-bg";
+import { Badge } from "@/components/ui/badge";
 import Logo from "@/components/ui/logo";
 import { TDCardBody, TDCardContainer, TDCardItem } from "@/components/ui/text-3d-card";
 import { TextGenerateEffect } from "@/components/ui/text-generate-effect";
 import ThemeButton from "@/components/ui/theme-button";
+import { RESUME_DATA } from "@/data/resume-data";
 import { opacityInViewVariants } from "@/framerVariants";
 import { MotionDiv, MotionHeader } from "@/lib/framer-motion";
-import HeroImage from "@/resources/images/visual-1.png";
+import HeroImage from "@/resources/images/visual-2.png";
 import Image from "next/image";
 
 export default function Home() {
   return (
-    <main className="min-h-screen p-8 overflow-auto flex justify-center">
+    <main className="min-h-screen flex w-full justify-center">
       <SparklesBg className="z-0" />
-      <div className="w-full max-w-6xl z-10">
+      <div className="w-full max-w-6xl z-10 overflow-auto absolute inset-0 p-4 md:p-8 m-auto">
         <MotionHeader {...opacityInViewVariants} className="flex gap-2 items-center justify-between">
           <div className="flex gap-2 items-center">
             <Logo className="w-8 h-8 fill-foreground bg-background rounded-full" />
@@ -20,10 +22,23 @@ export default function Home() {
           </div>
           <ThemeButton className="z-10" />
         </MotionHeader>
-        <MotionDiv {...opacityInViewVariants} className="w-full my-12 flex items-center select-none gap-4">
-          <TextGenerateEffect className="text-5xl font-bold text-center" words="Turn Your Vision into Reality" />
+        <MotionDiv {...opacityInViewVariants} className="w-full my-8 md:my-20 grid grid-flow-row md:grid-flow-col select-none gap-8">
+          <div className="flex flex-col gap-4 h-full text-center justify-between md:text-start">
+            <div className="flex flex-col gap-4">
+              <TextGenerateEffect className="text-5xl font-bold" words="Turn Your Vision into Reality" />
+              <span className="text-base text-muted-foreground">
+                Your project deserves excellence. With a personalized approach and a commitment to quality, I'm here to turn your digital vision into
+                reality.
+              </span>
+            </div>
+            <div className="flex gap-2 flex-wrap justify-center md:justify-start md:mb-10">
+              {RESUME_DATA.skills.slice(0, 8).map((skill) => (
+                <Badge>{skill}</Badge>
+              ))}
+            </div>
+          </div>
           <TDCardContainer>
-            <TDCardBody className="bg-gray-50 relative group/card  dark:hover:shadow-2xl dark:hover:shadow-emerald-500/[0.1] dark:bg-black dark:border-white/[0.2] border-black/[0.1] w-auto sm:w-[30rem] h-auto rounded-xl p-6 border  ">
+            <TDCardBody className="bg-gray-50 relative group/card dark:hover:shadow-2xl dark:hover:shadow-emerald-500/[0.1] dark:bg-black dark:border-white/[0.2] border-black/[0.1] w-auto sm:w-[30rem] h-auto rounded-xl p-6 border  ">
               <TDCardItem translateZ="50" className="text-xl font-bold text-neutral-600 dark:text-white">
                 Seeking flawless technical expertise paired with boundless creativity?
               </TDCardItem>
