@@ -1,3 +1,4 @@
+import ProjectsCards from "@/components/projects-cards";
 import SparklesBg from "@/components/sparkles-bg";
 import { Badge } from "@/components/ui/badge";
 import Logo from "@/components/ui/logo";
@@ -8,7 +9,7 @@ import sharedConfig from "@/constants/config";
 import { opacityInViewVariants } from "@/constants/framerVariants";
 import { RESUME_DATA } from "@/data/resume-data";
 import { MotionDiv, MotionHeader } from "@/lib/framer-motion";
-import HeroImage from "@/resources/images/hero-dunniabs.png";
+import HeroImage from "@/resources/hero-dunniabs.png";
 import type { Metadata } from "next";
 import Image from "next/image";
 
@@ -72,6 +73,7 @@ export default function Home() {
             </TDCardBody>
           </TDCardContainer>
         </MotionDiv>
+        <ProjectsCards />
       </div>
     </main>
   );

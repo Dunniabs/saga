@@ -1,6 +1,6 @@
 "use client";
 
-import LogoSVG from "@/resources/svgs/logo.svg";
+import LogoSVG from "@/resources/logo.svg";
 
 interface IProps {
   className?: string;

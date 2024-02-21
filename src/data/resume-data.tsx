@@ -1,3 +1,7 @@
+import GnogonsImage from "@/resources/projects/gnogons-cover.jpg";
+import GreatWarImage from "@/resources/projects/great-war-cover.jpg";
+import ReboomImage from "@/resources/projects/reboom-cover.jpeg";
+import RizenCityImage from "@/resources/projects/rizen-city-cover.jpeg";
 import { GithubLogo, LinkedinLogo, TwitterLogo } from "@phosphor-icons/react/dist/ssr";
 import type { ResumeData } from "data";
 
@@ -248,6 +252,7 @@ export const RESUME_DATA: ResumeData = {
         label: "Reboom",
         href: "https://reboom.co",
       },
+      image: ReboomImage,
     },
     {
       title: "Great War",
@@ -257,6 +262,8 @@ export const RESUME_DATA: ResumeData = {
         label: "Great War",
         href: "https://gng.gnogen.io",
       },
+      image: GreatWarImage,
+      videoPath: "/resources/projects/great-war-cover.mp4",
     },
     {
       title: "Gnogons v2",
@@ -266,6 +273,8 @@ export const RESUME_DATA: ResumeData = {
         label: "Gnogons v2",
         href: "https://gnogons.gnogen.io",
       },
+      image: GnogonsImage,
+      videoPath: "/resources/projects/gnogons-cover.mp4",
     },
     {
       title: "Rizen city",
@@ -275,6 +284,7 @@ export const RESUME_DATA: ResumeData = {
         label: "Rizen City",
         href: "https://rizencity.io/",
       },
+      image: RizenCityImage,
     },
   ],
 } as const;

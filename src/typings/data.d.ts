@@ -1,4 +1,5 @@
 declare module "data" {
+  import type { StaticImageData } from "next/image";
   import type { IconProps } from "@phosphor-icons/react";
   import type React from "react";
 
@@ -33,6 +34,8 @@ declare module "data" {
       label: string;
       href: string;
     };
+    image: StaticImageData;
+    videoPath?: string;
   }
 
   export interface ResumeData {
