@@ -22,10 +22,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={cn("min-h-screen !bg-background antialiased transition-colors", coreFont.className)}>
+      <body className={cn("min-h-[100dvh] !bg-background antialiased transition-colors", coreFont.className)}>
         <Analytics />
         <Providers>
-          <div vaul-drawer-wrapper="" className="min-h-[100vh]">
+          <div vaul-drawer-wrapper="" className="min-h-[100dvh]">
             {children}
           </div>
         </Providers>

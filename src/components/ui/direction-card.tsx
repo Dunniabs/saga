@@ -5,46 +5,27 @@ import { AnimatePresence, motion } from "framer-motion";
 import Image, { type StaticImageData } from "next/image";
 import { useRef, useState } from "react";
 
-const variants = {
-  initial: {
-    x: 0,
-  },
-
-  exit: {
-    x: 0,
-    y: 0,
-  },
-  top: {
-    y: 20,
-  },
-  bottom: {
-    y: -20,
-  },
-  left: {
-    x: 20,
-  },
-  right: {
-    x: -20,
-  },
-};
-
 const textVariants = {
   initial: {
     y: 0,
     x: 0,
     opacity: 0,
   },
+  enter: {
+    x: -2,
+    opacity: 1,
+  },
   exit: {
     y: 0,
     x: 0,
     opacity: 0,
   },
   top: {
-    y: -20,
+    x: -2,
     opacity: 1,
   },
   bottom: {
-    y: 2,
+    x: -2,
     opacity: 1,
   },
   left: {
@@ -52,7 +33,7 @@ const textVariants = {
     opacity: 1,
   },
   right: {
-    x: 20,
+    x: -2,
     opacity: 1,
   },
 };
@@ -109,7 +90,7 @@ export const DirectionAwareHover = ({
     <motion.div
       onMouseEnter={handleMouseEnter}
       ref={ref}
-      className={cn("bg-transparent rounded-lg overflow-hidden group/card relative w-full border border-border", className)}
+      className={cn("bg-transparent rounded-lg overflow-hidden group/card relative w-full border-2 border-border", className)}
     >
       <AnimatePresence mode="wait">
         <motion.div className="relative h-full w-full" initial="initial" whileHover={direction} exit="exit">

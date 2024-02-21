@@ -28,7 +28,7 @@ export const metadata: Metadata = {
 
 export default function Home() {
   return (
-    <main className="min-h-screen flex w-full justify-center">
+    <main className="h-full flex w-full justify-center">
       <SparklesBg className="z-0" />
       <div className="w-full max-w-6xl z-10 overflow-auto absolute inset-0 p-4 md:p-8 m-auto">
         <MotionHeader {...opacityInViewVariants} className="flex gap-2 items-center justify-between">

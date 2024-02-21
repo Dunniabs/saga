@@ -268,7 +268,7 @@ export const RESUME_DATA: ResumeData = {
     {
       title: "Gnogons v2",
       techStack: ["MultiversX", "Next.js", "tRPC", "Prisma", "React server components"],
-      description: "A Web3 dApp to migrate your Gnogons NFTs into v2",
+      description: "Experience the rebirth of legendary gnogons with our revamped trading website.",
       link: {
         label: "Gnogons v2",
         href: "https://gnogons.gnogen.io",
@@ -279,7 +279,8 @@ export const RESUME_DATA: ResumeData = {
     {
       title: "Rizen city",
       techStack: ["Ethereum", "Next.js", "Art"],
-      description: "A platform to build and grow your online business",
+      description:
+        "Rizen City is a next gen NFT project, with top of the line artwork, an established team, and utility that will truly bring more Web3 adoption to the space.",
       link: {
         label: "Rizen City",
         href: "https://rizencity.io/",

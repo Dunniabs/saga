@@ -1,4 +1,5 @@
 import { Button } from "@/components/ui/button";
+import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
 import { DirectionAwareHover } from "@/components/ui/direction-card";
 import {
   Drawer,
@@ -20,7 +21,7 @@ const ProjectsCards = () => {
       {RESUME_DATA.projects.map((project) => (
         <Drawer key={project.title}>
           <DrawerTrigger asChild>
-            <div className="relative flex items-center justify-center cursor-pointe">
+            <div className="relative flex items-center justify-center cursor-pointer">
               <DirectionAwareHover image={project.image}>
                 <p className="font-bold text-xl">{project.title}</p>
                 <p className="font-normal text-sm">{project.description}</p>
@@ -30,11 +31,28 @@ const ProjectsCards = () => {
           <DrawerContent>
             <div className="mx-auto w-full max-w-2xl">
               <DrawerHeader>
-                <DrawerTitle>{project.title}</DrawerTitle>
+                <a href={project.link.href} target="_blank" rel="noreferrer" aria-label={project.link.label}>
+                  <DrawerTitle className="text-blue-400 hover:underline transition-all">{project.title}</DrawerTitle>
+                </a>
                 <DrawerDescription>{project.description}</DrawerDescription>
               </DrawerHeader>
-              <div>
-                <Image src={project.image} alt={project.title} />
+              <div className="flex justify-center">
+                <Carousel
+                  className="w-[95%] md:w-[80%]"
+                  opts={{
+                    loop: true,
+                  }}
+                >
+                  <CarouselContent>
+                    <CarouselItem>
+                      <div className="p-1">
+                        <Image src={project.image} alt={project.title} className="rounded object-cover border border-border" />
+                      </div>
+                    </CarouselItem>
+                  </CarouselContent>
+                  <CarouselPrevious className="hidden md:block" />
+                  <CarouselNext className="hidden md:block" />
+                </Carousel>
               </div>
               <DrawerFooter>
                 <DrawerClose asChild>
