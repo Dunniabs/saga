@@ -12,7 +12,7 @@ const SparklesBg = ({ className }: IProps) => {
   const { theme } = useTheme();
 
   return (
-    <div className={cn("absolute inset-0 h-full w-full", className)}>
+    <div className={cn("absolute inset-x-0 h-full w-full m-auto", className)}>
       <SparklesCore
         id="tsparticlesfullpage"
         background="transparent"

@@ -1,5 +1,6 @@
 "use client";
 
+import { opacityInViewVariants } from "@/constants/framerVariants";
 import { cn } from "@/lib/utils";
 import { AnimatePresence, motion } from "framer-motion";
 import Image, { type StaticImageData } from "next/image";
@@ -88,13 +89,14 @@ export const DirectionAwareHover = ({
 
   return (
     <motion.div
+      {...opacityInViewVariants}
       onMouseEnter={handleMouseEnter}
       ref={ref}
       className={cn("bg-transparent rounded-lg overflow-hidden group/card relative w-full border-2 border-border", className)}
     >
       <AnimatePresence mode="wait">
         <motion.div className="relative h-full w-full" initial="initial" whileHover={direction} exit="exit">
-          <motion.div className="group-hover/card:block md:hidden absolute inset-0 w-full h-full bg-background/40 z-10 transition duration-500" />
+          <motion.div className="group-hover/card:opacity-100 md:opacity-0 absolute inset-0 w-full h-full bg-background/40 z-10 transition duration-500" />
           <div className="h-full w-full relative bg-background">
             <Image
               alt="image"
