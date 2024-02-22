@@ -70,6 +70,7 @@ export default function Home() {
                     src={HeroImage}
                     height="1000"
                     width="1000"
+                    placeholder="blur"
                     className="h-60 w-full object-cover rounded-xl group-hover/card:shadow-xl"
                     alt="Hero Image"
                   />

@@ -18,7 +18,7 @@ import Image from "next/image";
 const ProjectsCards = () => {
   return (
     <MotionSection className="flex flex-col gap-8">
-      <h2 className="text-4xl font-bold w-full text-center md:text-start">Projects</h2>
+      <h2 className="text-4xl font-bold w-full text-center md:text-start">Recent projects</h2>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-8">
         {RESUME_DATA.projects.map((project) => (
           <Drawer key={project.title}>
@@ -48,7 +48,7 @@ const ProjectsCards = () => {
                     <CarouselContent>
                       <CarouselItem>
                         <div className="p-1">
-                          <Image src={project.image} alt={project.title} className="rounded object-cover border border-border" />
+                          <Image src={project.image} alt={project.title} placeholder="blur" className="rounded object-cover border border-border" />
                         </div>
                       </CarouselItem>
                     </CarouselContent>

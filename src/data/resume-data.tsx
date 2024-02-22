@@ -1,6 +1,7 @@
 import GnogonsImage from "@/resources/projects/gnogons-cover.jpg";
 import GreatWarImage from "@/resources/projects/great-war-cover.jpg";
-import ReboomImage from "@/resources/projects/reboom-cover.jpeg";
+import MelbaImage from "@/resources/projects/melba-cover.jpg";
+import ReboomImage from "@/resources/projects/reboom-cover.jpg";
 import RizenCityImage from "@/resources/projects/rizen-city-cover.jpeg";
 import { GithubLogo, LinkedinLogo, TwitterLogo } from "@phosphor-icons/react/dist/ssr";
 import type { ResumeData } from "data";
@@ -245,16 +246,6 @@ export const RESUME_DATA: ResumeData = {
   ],
   projects: [
     {
-      title: "Reboom",
-      techStack: ["AI", "Next.js", "Langchain", "tRPC", "Prisma"],
-      description: "A saas app to scale your inbound organic traffic",
-      link: {
-        label: "Reboom",
-        href: "https://reboom.co",
-      },
-      image: ReboomImage,
-    },
-    {
       title: "Great War",
       techStack: ["MultiversX", "Next.js", "tRPC", "Prisma"],
       description: "A Web3 dApp to mine token using your Gnogen NFTs",
@@ -264,6 +255,26 @@ export const RESUME_DATA: ResumeData = {
       },
       image: GreatWarImage,
       videoPath: "/resources/projects/great-war-cover.mp4",
+    },
+    {
+      title: "Melba",
+      techStack: ["Next.js", "Symfony", "React", "Node.js", "Restaurants"],
+      description: "An ERP for restaurants and caterers",
+      link: {
+        label: "Melba",
+        href: "https://melba.io",
+      },
+      image: MelbaImage,
+    },
+    {
+      title: "Reboom",
+      techStack: ["AI", "Next.js", "Langchain", "tRPC", "Prisma"],
+      description: "A saas app to scale your inbound organic traffic",
+      link: {
+        label: "Reboom",
+        href: "https://reboom.co",
+      },
+      image: ReboomImage,
     },
     {
       title: "Gnogons v2",
