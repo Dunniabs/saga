@@ -9,6 +9,7 @@ import sharedConfig from "@/constants/config";
 import { opacityInViewVariants } from "@/constants/framerVariants";
 import { MotionHeader } from "@/lib/framer-motion";
 import type { Metadata } from "next";
+import Link from "next/link";
 
 export const metadata: Metadata = {
   alternates: {
@@ -42,9 +43,21 @@ export default function Home() {
           <ChoosingMe />
           <ProjectsCards />
           <Pricing />
-          {/* <div>contact me</div> */}
         </div>
-        {/* <div>footer</div> */}
+        <footer className="w-full backdrop-blur-xl">
+          <div className="w-full max-w-6xl py-12 md:py-8 flex justify-between items-center m-auto px-4">
+            <div className="flex justify-center gap-4">
+              <Logo className="w-8 h-8 fill-foreground bg-background rounded-full" />
+              <h1 className="text-lg font-bold select-none">Dunniabs</h1>
+            </div>
+            <div>
+              <Link href="/cv" className="text-muted-foreground transition-colors hover:text-blue-400">
+                CV
+              </Link>
+            </div>
+            <span className="select-none text-xs text-muted-foreground">© {new Date().getFullYear()} Dunniabs</span>
+          </div>
+        </footer>
       </div>
     </main>
   );

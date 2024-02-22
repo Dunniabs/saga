@@ -3,7 +3,7 @@ import { HeroSection } from "@/components/ui/hero-section";
 import { TDCardBody, TDCardContainer, TDCardItem } from "@/components/ui/text-3d-card";
 import { TextGenerateEffect } from "@/components/ui/text-generate-effect";
 import { RESUME_DATA } from "@/data/resume-data";
-import HeroImage from "@/resources/hero-dunniabs.png";
+import HeroImage from "@/resources/hero-dunniabs.jpg";
 import Image from "next/image";
 
 const HeroPrincipale = () => {
