@@ -1,5 +1,5 @@
+import { ProjectCard } from "@/app/(root)/cv/project-card";
 import { CommandMenu } from "@/components/command-menu";
-import { ProjectCard } from "@/components/project-card";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";

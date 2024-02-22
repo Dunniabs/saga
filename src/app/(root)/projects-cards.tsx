@@ -52,8 +52,8 @@ const ProjectsCards = () => {
                         </div>
                       </CarouselItem>
                     </CarouselContent>
-                    <CarouselPrevious className="hidden md:flex" />
-                    <CarouselNext className="hidden md:flex" />
+                    <CarouselPrevious className="left-4 md:-left-12" />
+                    <CarouselNext className="right-4 md:-right-12" />
                   </Carousel>
                 </div>
                 <DrawerFooter>
