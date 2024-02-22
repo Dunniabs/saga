@@ -1,6 +1,5 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { opacityInViewVariants } from "@/constants/framerVariants";
-import { MotionSection } from "@/lib/framer-motion";
+import { HeroSection, HeroTitle } from "@/components/ui/hero-section";
 import { cn } from "@/lib/utils";
 
 const choosingData: { title: string; content: React.ReactNode }[] = [
@@ -8,7 +7,7 @@ const choosingData: { title: string; content: React.ReactNode }[] = [
     title: "Innovative Web Developer and Entrepreneur",
     content: (
       <p>
-        Expertise in leveraging cutting-edge technologies like <strong>TypeScript</strong>, <strong>Next.js</strong>, <strong>Node.js</strong>, and
+        Expert in leveraging cutting-edge technologies like <strong>TypeScript</strong>, <strong>Next.js</strong>, <strong>Node.js</strong>, and{" "}
         <strong>React</strong> to build scalable, efficient web applications. Passionate about Web3 and AI, with a focus on enhancing inbound organic
         traffic through innovative solutions.
       </p>
@@ -18,7 +17,7 @@ const choosingData: { title: string; content: React.ReactNode }[] = [
     title: "Proven Leadership in Tech",
     content: (
       <p>
-        Experience leading projects and teams to success, highlighted by roles as <strong>CTO</strong> and <strong>lead developer</strong>.
+        Experienced in leading projects and teams to success, highlighted by roles as <strong>CTO</strong> and <strong>lead developer</strong>.
         Demonstrates a keen ability to drive <strong>product development</strong>, <strong>team efficiency</strong>, and{" "}
         <strong>tech innovation</strong>.
       </p>
@@ -69,12 +68,12 @@ interface IProps {
 
 const ChoosingMe = ({ className }: IProps) => {
   return (
-    <MotionSection {...opacityInViewVariants} className="flex flex-col gap-8">
-      <h2 className="text-4xl font-bold w-full text-center md:text-start">Our collaboration</h2>
+    <HeroSection className="flex flex-col gap-8">
+      <HeroTitle>Our collaboration</HeroTitle>
       <Card className={cn("relative p-0 md:p-4 rounded bg-muted/80", className)}>
         <div className="absolute inset-0 dark:bg-grid-small-white/[0.2] bg-grid-small-black/[0.2] z-0" />
         <CardHeader className="z-10">
-          <CardTitle>Why choosing me?</CardTitle>
+          <CardTitle>Why choose me?</CardTitle>
           <CardDescription className="text-base">
             You've come to the right place. I'm <strong>Paul-louis</strong>, your next <strong>web development partner</strong>, specialized in
             crafting personalized digital solutions that catapult your business to new heights.
@@ -92,7 +91,7 @@ const ChoosingMe = ({ className }: IProps) => {
           </ol>
         </CardContent>
       </Card>
-    </MotionSection>
+    </HeroSection>
   );
 };
 

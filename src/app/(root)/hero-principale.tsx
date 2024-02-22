@@ -1,15 +1,14 @@
 import { Badge } from "@/components/ui/badge";
+import { HeroSection } from "@/components/ui/hero-section";
 import { TDCardBody, TDCardContainer, TDCardItem } from "@/components/ui/text-3d-card";
 import { TextGenerateEffect } from "@/components/ui/text-generate-effect";
-import { opacityInViewVariants } from "@/constants/framerVariants";
 import { RESUME_DATA } from "@/data/resume-data";
-import { MotionSection } from "@/lib/framer-motion";
 import HeroImage from "@/resources/hero-dunniabs.png";
 import Image from "next/image";
 
-const HeroSection = () => {
+const HeroPrincipale = () => {
   return (
-    <MotionSection {...opacityInViewVariants} className="w-full mt-10 grid grid-flow-row md:grid-flow-col select-none gap-8">
+    <HeroSection className="w-full mt-10 grid grid-flow-row md:grid-flow-col select-none gap-8">
       <div className="flex flex-col gap-4 h-full text-center justify-between md:text-start">
         <div className="flex flex-col gap-4">
           <TextGenerateEffect className="text-5xl font-bold" words="Turn Your Vision into Reality" />
@@ -44,8 +43,8 @@ const HeroSection = () => {
           </TDCardItem>
         </TDCardBody>
       </TDCardContainer>
-    </MotionSection>
+    </HeroSection>
   );
 };
 
-export default HeroSection;
+export default HeroPrincipale;

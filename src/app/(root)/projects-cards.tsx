@@ -11,14 +11,14 @@ import {
   DrawerTitle,
   DrawerTrigger,
 } from "@/components/ui/drawer";
+import { HeroSection, HeroTitle } from "@/components/ui/hero-section";
 import { RESUME_DATA } from "@/data/resume-data";
-import { MotionSection } from "@/lib/framer-motion";
 import Image from "next/image";
 
 const ProjectsCards = () => {
   return (
-    <MotionSection className="flex flex-col gap-8">
-      <h2 className="text-4xl font-bold w-full text-center md:text-start">Recent projects</h2>
+    <HeroSection className="flex flex-col gap-8">
+      <HeroTitle>Recent projects</HeroTitle>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-8">
         {RESUME_DATA.projects.map((project) => (
           <Drawer key={project.title}>
@@ -66,7 +66,7 @@ const ProjectsCards = () => {
           </Drawer>
         ))}
       </div>
-    </MotionSection>
+    </HeroSection>
   );
 };
 

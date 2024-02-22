@@ -8,7 +8,7 @@ import { Section } from "@/components/ui/section";
 import { pageWrapperTransitionVariants } from "@/constants/framerVariants";
 import { RESUME_DATA } from "@/data/resume-data";
 import { MotionMain } from "@/lib/framer-motion";
-import { GlobeIcon, MailIcon, PhoneIcon } from "lucide-react";
+import { GlobeIcon, MailIcon } from "lucide-react";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -40,13 +40,6 @@ export default function Page() {
                 <Button className="size-8" variant="outline" size="icon" asChild>
                   <a href={`mailto:${RESUME_DATA.contact.email}`}>
                     <MailIcon className="size-4" />
-                  </a>
-                </Button>
-              ) : null}
-              {RESUME_DATA.contact.tel ? (
-                <Button className="size-8" variant="outline" size="icon" asChild>
-                  <a href={`tel:${RESUME_DATA.contact.tel}`}>
-                    <PhoneIcon className="size-4" />
                   </a>
                 </Button>
               ) : null}

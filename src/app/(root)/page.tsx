@@ -1,5 +1,6 @@
 import ChoosingMe from "@/app/(root)/choosing-me";
-import HeroSection from "@/app/(root)/hero-section";
+import HeroPrincipale from "@/app/(root)/hero-principale";
+import Pricing from "@/app/(root)/pricing";
 import ProjectsCards from "@/app/(root)/projects-cards";
 import SparklesBg from "@/components/sparkles-bg";
 import Logo from "@/components/ui/logo";
@@ -37,10 +38,13 @@ export default function Home() {
           </div>
         </MotionHeader>
         <div className="w-full max-w-6xl m-auto flex flex-col relative gap-16 md:gap-32 pb-4 px-4 md:px-0 md:pb-8">
-          <HeroSection />
+          <HeroPrincipale />
           <ChoosingMe />
           <ProjectsCards />
+          <Pricing />
+          {/* <div>contact me</div> */}
         </div>
+        {/* <div>footer</div> */}
       </div>
     </main>
   );
