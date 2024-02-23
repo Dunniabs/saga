@@ -96,7 +96,7 @@ export const DirectionAwareHover = ({
     >
       <AnimatePresence mode="wait">
         <motion.div className="relative h-full w-full" initial="initial" whileHover={direction} exit="exit">
-          <motion.div className="group-hover/card:opacity-100 md:opacity-0 absolute inset-0 w-full h-full bg-background/40 z-10 transition duration-500" />
+          <motion.div className="group-hover/card:opacity-100 absolute inset-0 w-full h-full bg-background/40 z-10 transition duration-500" />
           <div className="h-full w-full relative bg-background">
             <Image
               alt="image"
@@ -112,7 +112,7 @@ export const DirectionAwareHover = ({
               duration: 0.5,
               ease: "easeOut",
             }}
-            className={cn("absolute bottom-4 left-4 z-40 max-[640px]:!opacity-100", childrenClassName)}
+            className={cn("absolute bottom-4 left-4 z-40 !opacity-100", childrenClassName)}
           >
             {children}
           </motion.div>

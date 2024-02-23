@@ -12,7 +12,7 @@ const HeroPrincipale = () => {
       <div className="flex flex-col gap-4 h-full text-center justify-between md:text-start">
         <div className="flex flex-col gap-4">
           <TextGenerateEffect className="text-5xl font-bold" words="Turn Your Vision into Reality" />
-          <span className="text-base text-foreground/70">
+          <span className="text-base text-foreground/80 font-semibold">
             Your project deserves excellence. With a personalized approach and a commitment to quality, I'm here to turn your digital vision into
             reality.
           </span>

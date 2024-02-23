@@ -1,7 +1,6 @@
 import ChoosingMe from "@/app/(root)/choosing-me";
 import HeroPrincipale from "@/app/(root)/hero-principale";
 import Pricing from "@/app/(root)/pricing";
-import ProjectsCards from "@/app/(root)/projects-cards";
 import SparklesBg from "@/components/sparkles-bg";
 import Logo from "@/components/ui/logo";
 import ThemeButton from "@/components/ui/theme-button";
@@ -41,7 +40,6 @@ export default function Home() {
         <div className="w-full max-w-6xl m-auto flex flex-col relative gap-16 md:gap-32 pb-4 px-4 md:px-0 md:pb-8">
           <HeroPrincipale />
           <ChoosingMe />
-          <ProjectsCards />
           <Pricing />
         </div>
         <footer className="w-full backdrop-blur-xl">

@@ -53,7 +53,7 @@ const pricingData: {
               </DrawerHeader>
               <div className="grid grid-cols-1 md:grid-cols-4 justify-between gap-8 py-8 md:py-12 px-4">
                 {RESUME_DATA.contact.email ? (
-                  <Button variant="outline" asChild>
+                  <Button asChild>
                     <a href={`mailto:${RESUME_DATA.contact.email}`}>
                       <MailIcon className="size-4" />
                       <span className="ml-2">Email</span>
@@ -61,7 +61,7 @@ const pricingData: {
                   </Button>
                 ) : null}
                 {RESUME_DATA.contact.social.map((social) => (
-                  <Button key={social.name} variant="outline" asChild>
+                  <Button key={social.name} asChild>
                     <a href={social.url} target="_blank" rel="noreferrer">
                       <social.icon className="size-4" />
                       <span className="ml-2">{social.name}</span>

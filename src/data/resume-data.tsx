@@ -226,7 +226,7 @@ export const RESUME_DATA: ResumeData = {
   projects: [
     {
       title: "Great War",
-      techStack: ["MultiversX", "Next.js", "tRPC", "Prisma"],
+      techStack: ["MultiversX", "Next.js", "tRPC", "Prisma", "Vercel"],
       description: "A Web3 dApp to mine token using your Gnogen NFTs",
       link: {
         label: "Great War",
@@ -237,7 +237,7 @@ export const RESUME_DATA: ResumeData = {
     },
     {
       title: "Melba",
-      techStack: ["Next.js", "Symfony", "React", "Node.js", "Restaurants"],
+      techStack: ["Next.js", "Symfony", "React", "Node.js", "Restaurants", "Heroku"],
       description: "An ERP for restaurants and caterers",
       link: {
         label: "Melba",
@@ -247,7 +247,7 @@ export const RESUME_DATA: ResumeData = {
     },
     {
       title: "Reboom",
-      techStack: ["AI", "Next.js", "Langchain", "tRPC", "Prisma"],
+      techStack: ["AI", "Next.js", "Langchain", "tRPC", "Prisma", "AWS", "Vercel"],
       description: "A saas app to scale your inbound organic traffic",
       link: {
         label: "Reboom",
@@ -257,7 +257,7 @@ export const RESUME_DATA: ResumeData = {
     },
     {
       title: "Gnogons v2",
-      techStack: ["MultiversX", "Next.js", "tRPC", "Prisma", "React server components"],
+      techStack: ["MultiversX", "Next.js", "tRPC", "Prisma", "React server components", "Vercel"],
       description: "Experience the rebirth of legendary gnogons with our revamped trading website.",
       link: {
         label: "Gnogons v2",
@@ -268,7 +268,7 @@ export const RESUME_DATA: ResumeData = {
     },
     {
       title: "Rizen city",
-      techStack: ["Ethereum", "Next.js", "Art"],
+      techStack: ["Ethereum", "Next.js", "Art", "Vercel"],
       description:
         "Rizen City is a next gen NFT project, with top of the line artwork, an established team, and utility that will truly bring more Web3 adoption to the space.",
       link: {
