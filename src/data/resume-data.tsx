@@ -205,27 +205,6 @@ export const RESUME_DATA: ResumeData = {
       description:
         "Developed mobile and tablet applications for iOS and Android platforms using homemade technology, CoffeeScript (Node.js), JAVA, and Objective-C, including applications for El-Pais, Q/R, and Figaro Magazine.",
     },
-    {
-      company: "Prosodie",
-      title: "C/Script Developer",
-      start: "March 2012",
-      end: "August 2012",
-      description: "Developed Interactive Voice Response systems and scripts for log file analysis and processing using Awk.",
-    },
-    {
-      company: "Flagtory",
-      title: "C++ Developer",
-      start: "September 2011",
-      end: "March 2012",
-      description: "Developed mobile games for iOS and Android platforms.",
-    },
-    {
-      company: "Rentabiliweb",
-      title: "Web/Script Developer",
-      start: "June 2010",
-      end: "December 2010",
-      description: "Developed a website for file sharing (PHP/HTML/CSS) and scripts for processing Excel data (Perl).",
-    },
   ],
   skills: [
     "TypeScript",

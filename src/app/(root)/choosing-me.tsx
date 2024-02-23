@@ -74,7 +74,7 @@ const ChoosingMe = ({ className }: IProps) => {
         <div className="absolute inset-0 dark:bg-grid-small-white/[0.2] bg-grid-small-black/[0.2] z-0" />
         <CardHeader className="z-10">
           <CardTitle>Why choose me?</CardTitle>
-          <CardDescription className="text-base">
+          <CardDescription className="text-base text-foreground/70">
             You've come to the right place. I'm <strong>Paul-louis</strong>, your next <strong>web development partner</strong>, specialized in
             crafting personalized digital solutions that catapult your business to new heights.
           </CardDescription>
@@ -85,7 +85,7 @@ const ChoosingMe = ({ className }: IProps) => {
               // biome-ignore lint/suspicious/noArrayIndexKey: <explanation>
               <li key={index} className="flex flex-col gap-4">
                 <h3 className="text-lg font-bold">{data.title}</h3>
-                <div className="text-muted-foreground">{data.content}</div>
+                <div className="text-foreground/70">{data.content}</div>
               </li>
             ))}
           </ol>

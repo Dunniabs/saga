@@ -101,7 +101,7 @@ export default function Page() {
 
                   <h4 className="font-mono text-sm leading-none">{work.title}</h4>
                 </CardHeader>
-                <CardContent className="mt-2 text-xs whitespace-break-spaces flex flex-col gap-2">{work.description}</CardContent>
+                <CardContent className="mt-2 text-sm whitespace-break-spaces flex flex-col gap-2">{work.description}</CardContent>
               </Card>
             );
           })}
