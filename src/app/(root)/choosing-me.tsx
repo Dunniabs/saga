@@ -101,7 +101,7 @@ const ChoosingMe = ({ className }: IProps) => {
                     <h3 className="text-lg font-bold">{data.title}</h3>
                     <div className="text-foreground/70">{data.content}</div>
                     {project ? (
-                      <div className="flex gap-2 h-full justify-self-end items-end flex-wrap">
+                      <div className={cn("flex gap-2 h-full justify-center md:justify-start justify-self-end items-end flex-wrap")}>
                         {project.techStack.map((tech, index) => (
                           // biome-ignore lint/suspicious/noArrayIndexKey: <explanation>
                           <Badge className="h-fit" key={index}>
@@ -124,7 +124,7 @@ const ChoosingMe = ({ className }: IProps) => {
             </DrawerTrigger>
             {project ? (
               <DrawerContent>
-                <div className="mx-auto w-full max-w-2xl">
+                <div className="mx-auto w-full max-w-6xl">
                   <DrawerHeader>
                     <a href={project.link.href} target="_blank" rel="noreferrer" aria-label={project.link.label}>
                       <DrawerTitle className="text-blue-400 hover:underline transition-all">{project.title}</DrawerTitle>

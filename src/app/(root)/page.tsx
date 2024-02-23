@@ -7,6 +7,7 @@ import ThemeButton from "@/components/ui/theme-button";
 import sharedConfig from "@/constants/config";
 import { opacityInViewVariants } from "@/constants/framerVariants";
 import { MotionHeader } from "@/lib/framer-motion";
+import { GithubLogo } from "@phosphor-icons/react/dist/ssr";
 import type { Metadata } from "next";
 import Link from "next/link";
 
@@ -43,15 +44,26 @@ export default function Home() {
           <Pricing />
         </div>
         <footer className="w-full backdrop-blur-xl">
-          <div className="w-full max-w-6xl py-12 md:py-8 flex justify-between items-center m-auto px-4">
+          <div className="w-full max-w-6xl py-8 md:py-8 flex flex-col md:flex-row gap-4 justify-between items-center m-auto px-4">
             <div className="flex justify-center gap-4">
               <Logo className="w-8 h-8 fill-foreground bg-background rounded-full" />
               <h1 className="text-lg font-bold select-none">Dunniabs</h1>
             </div>
-            <div>
-              <Link href="/cv" className="text-muted-foreground transition-colors hover:text-blue-400">
+            <div className="flex gap-4 items-center">
+              <Link
+                href="/cv"
+                className="text-muted-foreground transition-colors hover:text-blue-400 hover:border-blue-400 rounded-full border border-border p-1"
+              >
                 CV
               </Link>
+              <a
+                href="https://github.com/Dunniabs/saga"
+                className="text-muted-foreground transition-colors hover:text-blue-400 hover:border-blue-400 rounded-full border border-border p-1"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <GithubLogo size={24} />
+              </a>
             </div>
             <span className="select-none text-xs text-muted-foreground">© {new Date().getFullYear()} Dunniabs</span>
           </div>

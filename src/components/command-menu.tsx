@@ -1,19 +1,20 @@
 "use client";
 
-import * as React from "react";
-
 import { Button } from "@/components/ui/button";
 import { CommandDialog, CommandEmpty, CommandGroup, CommandInput, CommandItem, CommandList, CommandSeparator } from "@/components/ui/command";
 import { CommandIcon } from "lucide-react";
+import { useTheme } from "next-themes";
+import { useEffect, useState } from "react";
 
 interface Props {
   links: { url: string; title: string }[];
 }
 
 export const CommandMenu = ({ links }: Props) => {
-  const [open, setOpen] = React.useState(false);
+  const [open, setOpen] = useState(false);
+  const { setTheme } = useTheme();
 
-  React.useEffect(() => {
+  useEffect(() => {
     const down = (e: KeyboardEvent) => {
       if (e.key === "j" && (e.metaKey || e.ctrlKey)) {
         e.preventDefault();
@@ -54,6 +55,22 @@ export const CommandMenu = ({ links }: Props) => {
               }}
             >
               <span>Print</span>
+            </CommandItem>
+            <CommandItem
+              onSelect={() => {
+                setOpen(false);
+                setTheme("light");
+              }}
+            >
+              <span>Set theme to light</span>
+            </CommandItem>
+            <CommandItem
+              onSelect={() => {
+                setOpen(false);
+                setTheme("dark");
+              }}
+            >
+              <span>Set theme to dark</span>
             </CommandItem>
           </CommandGroup>
           <CommandGroup heading="Links">
