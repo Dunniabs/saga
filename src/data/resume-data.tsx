@@ -52,6 +52,23 @@ export const RESUME_DATA: ResumeData = {
   ],
   work: [
     {
+      company: "Photoroom",
+      link: "https://photoroom.com",
+      badges: ["Mission", "B2B API", "Image editing"],
+      title: "Senior API Developer",
+      start: "March 2024",
+      end: "Present",
+      description: (
+        <>
+          <span>
+            At Photoroom, I am responsible for developing and maintaining the company's API, which is a B2B image editing service. I work with a
+            variety of technologies, including Node.js, sharp, TypeScript, to ensure optimal performance and user experience. My role involves
+            making key technical decisions, improving documentation, and securing the API through testing.
+          </span>
+        </>
+      ),
+    },
+    {
       company: "Reboom",
       link: "https://reboom.co",
       badges: ["SEO", "AI", "Lead Generation"],
