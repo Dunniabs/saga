@@ -36,6 +36,7 @@ declare module "data" {
     };
     image: StaticImageData;
     videoPath?: string;
+    decommissioned?: boolean;
   }
 
   export interface ResumeData {
