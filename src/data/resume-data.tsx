@@ -3,7 +3,7 @@ import GreatWarImage from "@/resources/projects/great-war-cover.jpg";
 import MelbaImage from "@/resources/projects/melba-cover.jpg";
 import ReboomImage from "@/resources/projects/reboom-cover.jpg";
 import RizenCityImage from "@/resources/projects/rizen-city-cover.jpeg";
-import { GithubLogo, LinkedinLogo, TwitterLogo } from "@phosphor-icons/react/dist/ssr";
+import { GithubLogo, LinkedinLogo } from "@phosphor-icons/react/dist/ssr";
 import type { ResumeData } from "data";
 
 export const RESUME_DATA: ResumeData = {
@@ -11,7 +11,7 @@ export const RESUME_DATA: ResumeData = {
   initials: "PLB",
   location: "Greater Paris Metropolitan Region",
   locationLink: "https://www.google.com/maps/place/Greater+Paris+Metropolitan+Region",
-  about: "Web Developer & Entrepreneur | Passionate about Web3 & AI ⚡ Scale your inbound organic traffic with reboom.co",
+  about: "Web Developer & Entrepreneur | Passionate about Web3 & AI ⚡",
   summary:
     "I am currently working as an advisor and developer in the tech industry with a strong background in computer science. I specialize in javascript/typescript and focus on architecting platforms, building infrastructure to frontend development, ensuring efficiency and user-friendliness. My approach includes leading teams, staying updated with tech trends, and contributing to client and organizational growth.",
   avatarUrl: "https://avatars.githubusercontent.com/u/3282055?s=400&u=8b1c324ceac2a4e417ffd4fb47e91b83e56af31f&v=4",
@@ -28,11 +28,6 @@ export const RESUME_DATA: ResumeData = {
         name: "LinkedIn",
         url: "www.linkedin.com/in/👾-paul-louis-b-4a832a5a",
         icon: LinkedinLogo,
-      },
-      {
-        name: "X",
-        url: "https://twitter.com/Frumba42",
-        icon: TwitterLogo,
       },
     ],
   },
@@ -52,18 +47,40 @@ export const RESUME_DATA: ResumeData = {
   ],
   work: [
     {
-      company: "Photoroom",
-      link: "https://photoroom.com",
-      badges: ["Mission", "B2B API", "Image editing"],
-      title: "Senior API Developer",
-      start: "March 2024",
+      company: "TeamOut (YC W22)",
+      link: "https://teamout.com",
+      badges: ["Permanent", "Booking App", "CI/CD"],
+      title: "Senior Web Engineer",
+      start: "October 2024",
       end: "Present",
       description: (
         <>
           <span>
-            At Photoroom, I am responsible for developing and maintaining the company's API, which is a B2B image editing service. I work with a
-            variety of technologies, including Node.js, sharp, TypeScript, to ensure optimal performance and user experience. My role involves
-            making key technical decisions, improving documentation, and securing the API through testing.
+            Shipped end-to-end features—database to UI—for Teamout's complex booking app, accelerating product delivery. Owned and improved CI/CD
+            pipelines, enabling reliable, fast releases with automated testing. Built and maintained three distinct surfaces: internal back-office,
+            venue-manager portal, and multi-role customer app, ensuring consistent UX and robust role-based access.
+          </span>
+          <span>Strengthened code quality and performance via rigorous reviews, test automation, and incremental architecture upgrades.</span>
+        </>
+      ),
+    },
+    {
+      company: "Photoroom",
+      link: "https://photoroom.com",
+      badges: ["Freelance", "B2B API", "Image editing"],
+      title: "Senior Web Engineer",
+      start: "March 2024",
+      end: "October 2024",
+      description: (
+        <>
+          <span>
+            Owned maintenance, feature development, and 24/7 reliability of Photoroom's public image-transformation API serving enterprise clients.
+            Improved the Node.js + Sharp processing pipeline for faster, higher-quality results while guaranteeing 100% uptime. Shipped new
+            transformation features and versioning, expanding API capabilities to meet evolving customer needs.
+          </span>
+          <span>
+            Boosted release confidence with thorough end-to-end tests and real-time performance monitoring. Enhanced an interactive API playground to
+            streamline self-serve onboarding and power B2B sales demos.
           </span>
         </>
       ),
@@ -99,11 +116,11 @@ export const RESUME_DATA: ResumeData = {
     },
     {
       company: "Dunniabs",
-      title: "Founder",
-      badges: ["Web3 developer", "Blockchain"],
+      title: "Freelance Web Developer",
+      badges: ["Freelance", "Web3 developer", "Blockchain"],
       link: "https://dunniabs.com",
       start: "November 2022",
-      end: "Present",
+      end: "October 2024",
       description: (
         <>
           <span>
@@ -121,21 +138,11 @@ export const RESUME_DATA: ResumeData = {
       ),
     },
     {
-      company: "Multis",
-      title: "Ingénieur full stack",
-      link: "https://multis.co",
-      badges: ["Blockchain"],
-      start: "October 2022",
-      end: "November 2022",
-      description:
-        "At Multis, I was responsible for developing and maintaining the company's web application, which is a multi-signature wallet for Ethereum.",
-    },
-    {
       company: "Melba",
       title: "CTO",
       link: "https://melba.io",
       start: "December 2019",
-      end: "September 2022",
+      end: "November 2022",
       description: (
         <>
           <span>
@@ -228,6 +235,9 @@ export const RESUME_DATA: ResumeData = {
     "Next.js",
     "Node.js",
     "React",
+    "Remix",
+    "tRPC",
+    "Effect",
     "Blockchain",
     "AI",
     "AWS",
@@ -266,6 +276,7 @@ export const RESUME_DATA: ResumeData = {
       title: "Reboom",
       techStack: ["AI", "Next.js", "Langchain", "tRPC", "Prisma", "AWS", "Vercel"],
       description: "A saas app to scale your inbound organic traffic",
+      decommissioned: true,
       link: {
         label: "Reboom",
         href: "https://reboom.co",
@@ -276,6 +287,7 @@ export const RESUME_DATA: ResumeData = {
       title: "Gnogons v2",
       techStack: ["MultiversX", "Next.js", "tRPC", "Prisma", "React server components", "Vercel"],
       description: "Experience the rebirth of legendary gnogons with our revamped trading website.",
+      decommissioned: true,
       link: {
         label: "Gnogons v2",
         href: "https://gnogons.gnogen.io",
@@ -288,6 +300,7 @@ export const RESUME_DATA: ResumeData = {
       techStack: ["Ethereum", "Next.js", "Art", "Vercel"],
       description:
         "Rizen City is a next gen NFT project, with top of the line artwork, an established team, and utility that will truly bring more Web3 adoption to the space.",
+      decommissioned: true,
       link: {
         label: "Rizen City",
         href: "https://rizencity.io/",
